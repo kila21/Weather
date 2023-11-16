@@ -10,3 +10,9 @@
   margin-right: 15px;
   padding-left: 8px;
 }
+
+@media (max-width: 400px) {
+  .countries {
+    margin-left: 50px;
+  }
+}
