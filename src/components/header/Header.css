@@ -1,0 +1,12 @@
+.countries {
+  display: flex;
+  font-size: 14px;
+  padding: 12px 15px 9px 30px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+.countries span {
+  margin-right: 15px;
+  padding-left: 8px;
+}
