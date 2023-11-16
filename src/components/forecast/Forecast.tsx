@@ -22,9 +22,10 @@ export const Forecast = (props: { lat: number; lon: number }) => {
     <div className="forecast-container">
       {daily &&
         forecastArray.map((item, index) => {
+          forecastArray[item] = daily[item];
           const newDate = new Date(daily[index].dt * 1000);
           return (
-            <div className="forecast">
+            <div key={item + index} className="forecast">
               <h5>{newDate.toLocaleString("en-US", { weekday: "short" })}</h5>
               <WeatherIcon size={30} code={daily[index].weather[0].icon} />
               <div className="forecast-temp">
