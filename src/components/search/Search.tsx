@@ -2,13 +2,24 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import "./Search.css";
+import { useState } from "react";
 
-export const Search = () => {
+export const Search = (props: any) => {
+  const [city, setCity] = useState<null | string>(null);
+
   return (
     <div className="search-container">
-      <input type="text" placeholder="Search a City here" autoComplete="off" />
+      <input
+        onChange={(e) => setCity(e.target.value)}
+        type="text"
+        placeholder="Search a City here"
+        autoComplete="off"
+      />
       <div className="search-icon">
-        <FontAwesomeIcon icon={faSearch} />
+        <FontAwesomeIcon
+          icon={faSearch}
+          onClick={() => props.findCityInfo(city)}
+        />
       </div>
       <div className="temperature-units">
         <span>C</span>|<span>F</span>
