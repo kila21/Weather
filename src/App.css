@@ -12,3 +12,9 @@
   font-size: 0.7rem;
   text-align: center;
 }
+
+@media (max-width: 700px) {
+  .main-container {
+    margin: 30px auto;
+  }
+}

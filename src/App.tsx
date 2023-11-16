@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 // import axios from "axios";
 
-import { Search } from "./components/search/search";
+import { Search } from "./components/search/Search";
 import { Header } from "./components/header/Header";
+import { Weather } from "./components/weather/Weather";
 
 import "./App.css";
+import { Forecast } from "./components/forecast/Forecast";
 
 function App() {
-  // const apikey = import.meta.env.VITE_API_KEY;
-
-  // const api = `https://api.openweathermap.org/geo/1.0/direct?q=rustavi&appid=${apikey}`;
   const newDate = new Date();
+  // const apikey = import.meta.env.VITE_API_KEY;
+  // const api = `https://api.openweathermap.org/geo/1.0/direct?q=rustavi&appid=${apikey}`;
 
   useEffect(() => {
     // axios.get(api).then((dat) => {
@@ -29,6 +30,10 @@ function App() {
         {newDate.toLocaleString("en-US", { month: "long" })} &nbsp;
         {newDate.getFullYear()} &nbsp;| &nbsp; Local time: {newDate.getHours()}:
         {newDate.getMinutes()}
+      </div>
+      <Weather />
+      <div className="forecasts-container">
+        <Forecast />
       </div>
     </div>
   );
