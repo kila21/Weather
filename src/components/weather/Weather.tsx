@@ -1,45 +1,54 @@
+import { WeatherCompPropsType } from "../../types/WeatherCompPropsType";
 import "./Weather.css";
 import { WeatherIcon } from "./WeatherIcon";
 
-export const Weather = () => {
+export const Weather = (props: WeatherCompPropsType) => {
   return (
     <div className="weather-container">
-      <h1>Rustavi</h1>
-      <h3>Clear Sky</h3>
+      <h1>{props.name}</h1>
+      <h3>{props.description}</h3>
 
       <div className="weather-content">
-        <WeatherIcon size={60} />
+        <WeatherIcon size={60} code={props.icon} />
 
         <div className="weather-temperature">
-          22 <span>°C</span>
+          {Math.round(props.temperature)} <span>°C</span>
         </div>
 
         <div className="weather-info">
           <span>
             real feel:{" "}
             <span className="weather-span__whiter">
-              21{" "}
+              {Math.round(props.feels_like)}{" "}
               <span style={{ verticalAlign: "super", fontSize: "0.8rem" }}>
                 °
               </span>
             </span>
           </span>
           <span>
-            humidicity: <span className="weather-span__whiter">34%</span>
+            humidicity:{" "}
+            <span className="weather-span__whiter">
+              {Math.round(props.humidicity)}%
+            </span>
           </span>
           <span>
-            Wind: <span className="weather-span__whiter">4 km/h</span>
+            Wind:{" "}
+            <span className="weather-span__whiter">
+              {Math.round(props.wind)} km/h
+            </span>
           </span>
         </div>
       </div>
 
       <div className="temp-high-low">
         <div>
-          High: <span className="weather-span__whiter">22</span>
+          High:{" "}
+          <span className="weather-span__whiter">{Math.round(props.high)}</span>
         </div>
         |
         <div>
-          Low: <span className="weather-span__whiter">21</span>
+          Low:{" "}
+          <span className="weather-span__whiter">{Math.round(props.low)}</span>
         </div>
       </div>
     </div>

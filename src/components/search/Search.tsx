@@ -4,7 +4,7 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 import "./Search.css";
 import { useState } from "react";
 
-export const Search = (props: any) => {
+export const Search = (props: { findCityInfo: (str: string) => void }) => {
   const [city, setCity] = useState<null | string>(null);
 
   return (
@@ -18,7 +18,7 @@ export const Search = (props: any) => {
       <div className="search-icon">
         <FontAwesomeIcon
           icon={faSearch}
-          onClick={() => props.findCityInfo(city)}
+          onClick={() => (city ? props.findCityInfo(city) : null)}
         />
       </div>
       <div className="temperature-units">

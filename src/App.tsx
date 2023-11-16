@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 // import axios from "axios";
 
@@ -39,8 +39,8 @@ function App() {
   };
 
   useEffect(() => {
-    console.log(weatherData);
-  }, [weatherData]);
+    findCityInfo("Rustavi");
+  }, []);
   return (
     // layout
     <div className="main-container">
@@ -53,7 +53,19 @@ function App() {
         {newDate.getFullYear()} &nbsp;| &nbsp; Local time: {newDate.getHours()}:
         {newDate.getMinutes()}
       </div>
-      <Weather />
+      {weatherData && (
+        <Weather
+          name={weatherData?.name}
+          temperature={weatherData?.temperature}
+          high={weatherData?.temp_max}
+          low={weatherData?.temp_min}
+          humidicity={weatherData?.humidity}
+          wind={weatherData?.wind}
+          feels_like={weatherData?.feels_like}
+          description={weatherData?.description}
+          icon={weatherData?.icon}
+        />
+      )}
       <div className="forecasts-container">
         <Forecast />
       </div>
