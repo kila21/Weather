@@ -66,9 +66,10 @@ function App() {
           icon={weatherData?.icon}
         />
       )}
-      <div className="forecasts-container">
-        <Forecast />
-      </div>
+
+      {weatherData?.coord && (
+        <Forecast lat={weatherData.coord.lat} lon={weatherData.coord.lon} />
+      )}
     </div>
   );
 }
