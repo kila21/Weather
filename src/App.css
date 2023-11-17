@@ -5,6 +5,7 @@
   min-height: 500px;
   background-color: #163d80;
   background-image: linear-gradient(315deg, #09214f 0%, #385fa477 74%);
+  box-shadow: 5px 10px 10px 5px #0f0f0f;
   display: flex;
   flex-direction: column;
 }
