@@ -55,8 +55,6 @@ h3 {
   margin-right: 10px;
   margin-left: 10px;
 }
-.temp-high-low span {
-}
 
 @media (max-width: 400px) {
   .weather-content {

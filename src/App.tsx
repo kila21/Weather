@@ -3,7 +3,6 @@ import axios from "axios";
 // import axios from "axios";
 
 import { Search } from "./components/search/Search";
-import { Header } from "./components/header/Header";
 import { Weather } from "./components/weather/Weather";
 import { Forecast } from "./components/forecast/Forecast";
 
