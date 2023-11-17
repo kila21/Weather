@@ -29,8 +29,12 @@ export const Forecast = (props: { lat: number; lon: number }) => {
               <h5>{newDate.toLocaleString("en-US", { weekday: "short" })}</h5>
               <WeatherIcon size={30} code={daily[index].weather[0].icon} />
               <div className="forecast-temp">
-                <span className="high">{daily[index].temp.max}°</span>
-                <span className="low">{daily[index].temp.min}°</span>
+                <span className="high">
+                  {Math.round(daily[index].temp.max)}°
+                </span>
+                <span className="low">
+                  {Math.round(daily[index].temp.min)}°
+                </span>
               </div>
             </div>
           );
