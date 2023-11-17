@@ -24,4 +24,5 @@ body {
   background-image: linear-gradient(180deg, #305baa 0%, #4c6fac77 75%);
   color: white;
   overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
