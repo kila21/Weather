@@ -1,6 +1,7 @@
 .search-container {
   display: flex;
   margin: 20px;
+  justify-content: space-evenly;
 }
 
 input {
@@ -32,21 +33,6 @@ input:focus {
   justify-content: center;
   border: 1px solid white;
   margin-left: 20px;
-}
-
-.temperature-units {
-  margin-left: 20px;
-  margin-right: 20px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* text-align: center; */
-}
-.temperature-units span {
-  cursor: pointer;
-  padding: 10px;
-  height: 100%;
 }
 
 @media (max-width: 400px) {

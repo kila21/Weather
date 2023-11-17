@@ -21,9 +21,6 @@ export const Search = (props: { findCityInfo: (str: string) => void }) => {
           onClick={() => (city ? props.findCityInfo(city) : null)}
         />
       </div>
-      <div className="temperature-units">
-        <span>C</span>|<span>F</span>
-      </div>
     </div>
   );
 };
