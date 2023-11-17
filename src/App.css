@@ -2,7 +2,7 @@
   margin: 10px auto;
   max-width: 490px;
   /* min-width: 490px; */
-  min-height: 500px;
+  min-height: 450px;
   background-color: #163d80;
   background-image: linear-gradient(315deg, #09214f 0%, #385fa477 74%);
   box-shadow: 5px 10px 10px 5px #0f0f0f;
@@ -13,6 +13,8 @@
 .date {
   font-size: 0.7rem;
   text-align: center;
+  font-weight: 500;
+  opacity: 0.8;
 }
 
 @media (max-width: 700px) {

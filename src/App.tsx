@@ -44,7 +44,6 @@ function App() {
   return (
     // layout
     <div className="main-container">
-      <Header />
       <Search findCityInfo={findCityInfo} />
       <div className="date">
         {newDate.toLocaleString("en-US", { weekday: "long" })},
