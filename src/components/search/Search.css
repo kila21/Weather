@@ -36,7 +36,7 @@ input:focus {
 }
 
 @media (max-width: 400px) {
-  .search-container {
-    margin-left: 50px;
+  input {
+    margin-left: 0;
   }
 }
