@@ -5,14 +5,16 @@ import { WeatherIcon } from "./WeatherIcon";
 export const Weather = (props: WeatherCompPropsType) => {
   return (
     <div className="weather-container">
-      <h1>{props.name}</h1>
+      <h1>
+        {props.name}, {props.country}
+      </h1>
       <h3>{props.description}</h3>
 
       <div className="weather-content">
         <WeatherIcon size={60} code={props.icon} />
 
         <div className="weather-temperature">
-          {Math.round(props.temperature)} <span>°C</span>
+          {Math.round(props.temperature)} <span>°</span>C
         </div>
 
         <div className="weather-info">
@@ -43,12 +45,18 @@ export const Weather = (props: WeatherCompPropsType) => {
       <div className="temp-high-low">
         <div>
           High:{" "}
-          <span className="weather-span__whiter">{Math.round(props.high)}</span>
+          <span className="weather-span__whiter">
+            {Math.round(props.high)}
+            <span className="temp-span">°</span>
+          </span>
         </div>
         |
         <div>
           Low:{" "}
-          <span className="weather-span__whiter">{Math.round(props.low)}</span>
+          <span className="weather-span__whiter">
+            {Math.round(props.low)}
+            <span className="temp-span">°</span>
+          </span>
         </div>
       </div>
     </div>

@@ -64,6 +64,7 @@ function App() {
           feels_like={weatherData?.feels_like}
           description={weatherData?.description}
           icon={weatherData?.icon}
+          country={weatherData.country}
         />
       )}
 

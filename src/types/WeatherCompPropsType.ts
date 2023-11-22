@@ -8,4 +8,5 @@ export interface WeatherCompPropsType {
   high: number;
   low: number;
   icon: string;
+  country: string;
 }
