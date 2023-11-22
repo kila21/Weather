@@ -49,7 +49,9 @@ function App() {
         {newDate.getDate()} &nbsp;
         {newDate.toLocaleString("en-US", { month: "long" })} &nbsp;
         {newDate.getFullYear()} &nbsp;| &nbsp; Local time: {newDate.getHours()}:
-        {newDate.getMinutes()}
+        {newDate.getMinutes() < 9
+          ? `0${newDate.getMinutes()}`
+          : newDate.getMinutes()}
       </div>
       {weatherData && (
         <Weather
